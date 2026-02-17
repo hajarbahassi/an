@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIYAD AUTO PRESTIGE | Excellence & Héritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700;900&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --red: #C8102E; --gold: #B4975A; --blue: #002349; --light: #f9f9f9; }
+        
+        body { 
+            font-family: 'Outfit', sans-serif; 
+            margin: 0; 
+            background: var(--light); 
+            color: var(--blue); 
+            overflow-x: hidden; 
+            scroll-behavior: smooth;
+            transition: background 0.8s ease; 
+        }
+
+        /* Top Bar & Nav */
+        .top-bar { background: var(--red); color: white; text-align: center; padding: 10px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; }
+        nav { background: white; padding: 10px 5%; border-bottom: 5px solid var(--red); position: sticky; top: 0; z-index: 1000; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+        
+        .logo-text { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; font-weight: 900; text-transform: uppercase; line-height: 1; color: var(--blue); text-decoration: none; }
+        .logo-text span { color: var(--red); display: block; font-size: 0.8rem; letter-spacing: 3px; }
+
+        /* Hero */
+        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('vieux-chauffeur.jpg.png') center/cover; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white; }
+        .hero h1 { font-family: 'Bodoni Moda', serif; font-size: clamp(2.5rem, 8vw, 5rem); margin: 0; }
+
+        /* Grilles centrées */
+        .grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; /* Centre les photos horizontalement */
+            gap: 40px; 
+            max-width: 1300px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+
+        .card { 
+            background: white; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            width: 350px; /* Taille fixe pour garantir le centrage */
+            transition: 0.4s; 
+            cursor: pointer;
+        }
+        .card img { width: 100%; height: 350px; object-fit: cover; border-bottom: 4px solid var(--red); }
+        .card-body { padding: 25px; text-align: center; }
+
+        /* SECTION VINTAGE (Le changement de Vibe) */
+        #vintage-section { 
+            padding: 100px 0; 
+            transition: all 1s ease;
+            background: var(--light); /* Par défaut */
+        }
+
+        /* Classe activée par le scroll JS */
+        body.vintage-vibe { background: #0a0a0a !important; }
+        body.vintage-vibe #vintage-section { color: var(--gold); }
+        body.vintage-vibe .vintage-card { background: #1a1a1a; color: white; border: 1px solid #333; }
+        body.vintage-vibe .vintage-card img { border-bottom: 4px solid var(--gold); }
+
+        .section-title { font-family: 'Bodoni Moda', serif; text-align: center; font-size: 3rem; margin: 50px 0; }
+        .section-title span { display: block; font-size: 0.9rem; color: var(--red); letter-spacing: 8px; text-transform: uppercase; }
+
+        /* Modal */
+        .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); backdrop-filter: blur(8px); }
+        .modal-content { background: white; margin: 5% auto; padding: 40px; border-radius: 15px; width: 90%; max-width: 400px; text-align: center; }
+
+        footer { background: var(--blue); color: white; padding: 60px 5%; text-align: center; border-top: 5px solid var(--gold); }
+        
+        #player { position: absolute; top: -999px; left: -999px; } /* Cache le player YT */
+    </style>
+</head>
+<body>
+
+<div class="top-bar">LE PRESTIGE N'A PAS D'ÂGE.</div>
+
+<nav>
+    <div class="nav-content">
+        <a href="#" class="logo-text">RIYAD AUTO<span>PRESTIGE</span></a>
+        <a href="tel:0628875855" style="color:var(--red); font-weight:900; text-decoration:none;"><i class="fas fa-phone"></i> 06 28 87 58 55</a>
+    </div>
+</nav>
+
+<div id="modern-ui">
+    <section class="hero
